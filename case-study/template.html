@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Duplicate this file for every new case study, then edit these 4 lines -->
+<title>[PROJECT NAME] — Case Study | [YOUR NAME]</title>
+<meta name="description" content="[ONE-SENTENCE SUMMARY OF THE PROJECT AND THE RESULT.]">
+<link rel="canonical" href="https://[YOUR-DOMAIN].vercel.app/case-study/template.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="[PROJECT NAME] — Case Study">
+<meta property="og:description" content="[ONE-SENTENCE SUMMARY.]">
+<meta property="og:image" content="https://[YOUR-DOMAIN].vercel.app/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/sections.css">
+<link rel="stylesheet" href="../assets/css/case-study.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "[PROJECT NAME]",
+  "author": { "@type": "Person", "name": "[YOUR NAME]" },
+  "about": "[SHORT DESCRIPTION]",
+  "url": "https://[YOUR-DOMAIN].vercel.app/case-study/template.html"
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="nav__brand" href="../index.html">[YOUR NAME]</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="../index.html#work">Work</a>
+      <a class="nav__link" href="../index.html#about">About</a>
+      <a class="nav__link" href="../index.html#skills">Skills</a>
+      <a class="nav__link" href="../index.html#experience">Experience</a>
+      <a class="nav__link" href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--sm" href="../assets/docs/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="mobile-menu" data-menu aria-hidden="true">
+  <nav class="menu__list" aria-label="Mobile">
+    <a class="menu__link" href="../index.html#work">Work</a>
+    <a class="menu__link" href="../index.html#about">About</a>
+    <a class="menu__link" href="../index.html#skills">Skills</a>
+    <a class="menu__link" href="../index.html#experience">Experience</a>
+    <a class="menu__link" href="../index.html#contact">Contact</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ---------- Case study hero ---------- -->
+  <section class="cs-hero">
+    <div class="container">
+      <a class="cs-back" href="../index.html#work"><span aria-hidden="true">&larr;</span> Back to work</a>
+      <div class="stack stack-5" data-reveal>
+        <p class="label">[CATEGORY · CATEGORY · CATEGORY]</p>
+        <h1 class="h1 cs-hero__title">[PROJECT NAME]</h1>
+        <p class="lead cs-hero__sub">[ONE OR TWO SENTENCES THAT SUMMARISE THE PROJECT AND WHY IT MATTERED.]</p>
+      </div>
+
+      <dl class="cs-facts" data-reveal>
+        <div><dt>Role</dt><dd>[YOUR ROLE]</dd></div>
+        <div><dt>Year</dt><dd>[YEAR]</dd></div>
+        <div><dt>Tools</dt><dd>[TOOLS]</dd></div>
+        <div><dt>Link</dt><dd><a class="arrow-link" href="[PROJECT URL]" target="_blank" rel="noopener">Live page <span class="arrow-link__icon" aria-hidden="true">&#8599;</span></a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ---------- Cover image ---------- -->
+  <section class="section section--sm section--flush-top">
+    <div class="container">
+      <figure class="cs-cover" data-reveal="scale">
+        <!-- Replace with: <img src="../assets/img/case-01-cover.jpg" alt="[DESCRIBE THE IMAGE]"> -->
+        <div class="thumb"><span class="thumb__text">Cover image &mdash; 16:9</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---------- Story: Problem → Approach → Execution → Result ---------- -->
+  <section class="section">
+    <div class="container">
+
+      <div class="cs-body" data-reveal>
+        <p class="cs-body__label">Problem</p>
+        <div class="cs-body__content">
+          <p>[WHAT WAS THE SITUATION? Who was the audience, what were they struggling with, and what was the business goal?]</p>
+        </div>
+      </div>
+
+      <div class="cs-body" data-reveal>
+        <p class="cs-body__label">Approach</p>
+        <div class="cs-body__content">
+          <p>[HOW DID YOU THINK ABOUT IT? Research, strategy, the decisions you made and why.]</p>
+          <ul>
+            <li>[Key decision one]</li>
+            <li>[Key decision two]</li>
+            <li>[Key decision three]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cs-body" data-reveal>
+        <p class="cs-body__label">Execution</p>
+        <div class="cs-body__content">
+          <p>[WHAT DID YOU ACTUALLY BUILD OR SHIP? Pages, content, campaign, tracking — and how AI fitted into the process if it did.]</p>
+        </div>
+      </div>
+
+      <div class="cs-body" data-reveal>
+        <p class="cs-body__label">Result</p>
+        <div class="cs-body__content">
+          <p>[WHAT CHANGED? Use verified numbers only, and say over what period they were measured.]</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---------- Gallery ---------- -->
+  <section class="section section--sm section--soft">
+    <div class="container">
+      <div class="cs-gallery" data-reveal>
+        <figure><div class="thumb"><span class="thumb__text">Image 01</span></div></figure>
+        <figure><div class="thumb"><span class="thumb__text">Image 02</span></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Next / CTA ---------- -->
+  <section class="section section--sm">
+    <div class="container">
+      <div class="cs-next">
+        <div class="stack stack-2">
+          <p class="label label--muted">Next</p>
+          <p class="h3">[NEXT PROJECT NAME]</p>
+        </div>
+        <div class="row">
+          <a class="btn btn--ghost" href="../index.html#work">All work</a>
+          <a class="btn" href="../index.html#contact">Get in touch <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <p class="dim" style="font-size: var(--fs-small);">&copy; <span data-year>2026</span> [YOUR NAME]</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <p class="footer__note">Designed &amp; built with AI + human creativity.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/nav.js" defer></script>
+<script src="../assets/js/reveal.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
