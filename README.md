@@ -4,7 +4,9 @@
 สร้างด้วย **HTML + CSS + Vanilla JavaScript** ไม่มี build step ไม่มี dependency
 เปิดไฟล์ `index.html` ได้ทันที และ deploy ขึ้น Vercel ได้เลย
 
-> **สถานะตอนนี้:** โครงสร้าง + Design System + Layout + Animation เสร็จสมบูรณ์
+**Live:** https://miltramee.vercel.app · **Repo:** https://github.com/miltramee-mnt/portfolio
+
+> **สถานะตอนนี้:** โครงสร้าง + Design System + Layout + Animation เสร็จสมบูรณ์ และ deploy ขึ้น Vercel แล้ว
 > ข้อความทั้งหมดเป็น **Placeholder** ที่อยู่ในวงเล็บเหลี่ยม เช่น `[YOUR NAME]`
 > ยังไม่มีการใส่ข้อมูลส่วนตัวหรือประสบการณ์ใด ๆ ที่ไม่ได้ให้ไว้
 
@@ -135,7 +137,7 @@ Type scale เป็น `clamp()` ทั้งหมด (fluid) → `--fs-displa
 | `[EMAIL]` | อีเมล | menu, contact, JSON-LD |
 | `[LINKEDIN]` | URL LinkedIn เต็ม | resume, contact, JSON-LD |
 | `[LINKEDIN HANDLE]` | ชื่อที่แสดง เช่น /in/yourname | contact |
-| `[YOUR-DOMAIN]` | โดเมนจริง | meta, canonical, sitemap, robots |
+| ~~`[YOUR-DOMAIN]`~~ | ✅ ตั้งเป็น `miltramee.vercel.app` แล้ว | meta, canonical, sitemap, robots |
 | `[X]+` | ตัวเลข About | about |
 | `XX+` `XX%` | ตัวเลข Results | results |
 | `[YEAR]` `[PREVIOUS ROLE]` | timeline / featured | experience, featured |
@@ -255,7 +257,7 @@ Problem → Approach → Execution → Result
 - Skip link, `:focus-visible`, `aria-expanded` / `aria-controls` / `aria-hidden` ที่ accordion และเมนู
 - ไม่มี JS ที่ block การ render (ใช้ `defer` ทั้งหมด), ไม่มี framework, ไม่มีรูปใน Hero
 
-**ก่อน deploy อย่าลืม:** แทนที่ `[YOUR-DOMAIN]` ใน `index.html`, `case-study/*.html`, `sitemap.xml`, `robots.txt`
+**หมายเหตุ:** โดเมนถูกตั้งเป็น `miltramee.vercel.app` เรียบร้อยแล้วใน `index.html`, `case-study/*.html`, `sitemap.xml`, `robots.txt` — ถ้าเปลี่ยนโดเมนใหม่ ให้ค้นหา `miltramee.vercel.app` แล้วแทนที่ทั้งหมด
 
 ---
 
@@ -286,7 +288,6 @@ git push -u origin main
 
 **ขั้นที่ 3 — หลัง deploy**
 
-- นำโดเมนจริงไปแทนที่ `[YOUR-DOMAIN]` แล้ว push ใหม่
 - ต่อโดเมนของตัวเอง: Project → Settings → Domains
 - ทุก `git push` ขึ้น `main` จะ deploy อัตโนมัติ
 
@@ -300,7 +301,7 @@ python3 -m http.server 8000    # แล้วเปิด http://localhost:8000
 
 ## 13. Checklist ก่อนส่งสมัครงาน
 
-- [ ] แทนที่ `[YOUR NAME]` `[ROLE]` `[EMAIL]` `[LINKEDIN]` `[YOUR-DOMAIN]` ครบทุกไฟล์
+- [ ] แทนที่ `[YOUR NAME]` `[ROLE]` `[EMAIL]` `[LINKEDIN]` ครบทุกไฟล์
 - [ ] เขียน About จริง 3 ย่อหน้า
 - [ ] ใส่ Challenge / Approach / Outcome ของโปรเจกต์ 01 และ 02
 - [ ] เปลี่ยนภาพ placeholder เป็น screenshot จริง
