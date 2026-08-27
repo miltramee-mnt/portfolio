@@ -1,0 +1,124 @@
+/* ============================================================
+   RESPONSIVE — mobile is re-laid-out, not just shrunk.
+   Breakpoints: 1280 / 1024 / 768 / 560 / 390
+   ============================================================ */
+
+/* ---------- ≤ 1280px : tighten rhythm ---------- */
+@media (max-width: 1280px) {
+  :root { --container: 1120px; }
+  .skills-grid { gap: var(--sp-5); }
+}
+
+/* ---------- ≤ 1024px : tablet landscape / small laptop ---------- */
+@media (max-width: 1024px) {
+  .hero { min-height: auto; padding-top: calc(var(--nav-h) + var(--sp-9)); }
+  .hero__inner { grid-template-columns: 1fr; gap: var(--sp-8); }
+  .hero__visual { max-width: 340px; margin-inline: 0; }
+  .hero__scroll { display: none; }
+
+  .split { grid-template-columns: 1fr; gap: var(--sp-8); }
+
+  .work-item__head { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .work-item__media { order: -1; aspect-ratio: 16 / 9; }
+
+  .featured__grid { grid-template-columns: 1fr; gap: var(--sp-8); }
+
+  .cap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cap:nth-child(3n) { border-right: 1px solid var(--line); }
+  .cap:nth-child(2n) { border-right: 0; }
+
+  .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--sp-7); }
+
+  /* Flow becomes vertical */
+  .flow { grid-template-columns: 1fr; gap: 0; }
+  .flow::before,
+  .flow__progress { display: none; }
+  .flow__step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    padding-block: var(--sp-4);
+    border-bottom: 1px solid var(--line-invert);
+  }
+  .flow__step:last-child { border-bottom: 0; }
+  .flow__dot { margin-top: 6px; }
+
+  /* Timeline becomes vertical */
+  .timeline__track { left: 5px; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
+  .timeline__list { grid-auto-flow: row; gap: 0; }
+  .tl-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--sp-5);
+    padding-block: var(--sp-5);
+    padding-right: 0;
+  }
+  .tl-item__dot { margin-top: 6px; flex: none; }
+  .tl-item__body { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+  .contact__links { grid-template-columns: 1fr; }
+}
+
+/* ---------- ≤ 768px : tablet portrait & below ---------- */
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__actions .btn { display: none; }
+  .nav__toggle { display: inline-flex; }
+  .nav.is-scrolled { background: rgba(255,255,255,0.86); }
+
+  .section-head--split { flex-direction: column; align-items: flex-start; }
+
+  .work-item__panel-body { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .work-item__media { border-radius: var(--r-md); }
+
+  .cap-grid { grid-template-columns: 1fr; }
+  .cap { border-right: 0 !important; padding-inline: 0; }
+
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--sp-8); }
+
+  .story-block { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .spec-list > div { grid-template-columns: 5.5rem minmax(0, 1fr); }
+
+  .footer__inner { flex-direction: column; align-items: flex-start; gap: var(--sp-4); }
+}
+
+/* ---------- ≤ 560px : phones ---------- */
+@media (max-width: 560px) {
+  :root { --nav-h: 4rem; --nav-h-compact: 3.5rem; }
+
+  .hero__title { max-width: none; }
+  .hero__cta { width: 100%; }
+  .hero__cta .btn { flex: 1 1 100%; }
+
+  .stats-inline { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .stat-mini { display: flex; align-items: baseline; gap: var(--sp-4); }
+  .stat-mini__label { margin-top: 0; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr; row-gap: var(--sp-7); }
+
+  .featured__shot { aspect-ratio: 4 / 3; }
+  .work-item__media { aspect-ratio: 4 / 3; }
+
+  .resume__actions { width: 100%; }
+  .resume__actions .btn { flex: 1 1 100%; }
+
+  .contact__link { padding-right: 0; }
+}
+
+/* ---------- ≤ 390px : small phones ---------- */
+@media (max-width: 390px) {
+  :root { --gutter: 1.125rem; }
+  .btn { padding: 0.85rem 1.25rem; }
+  .menu__link { font-size: 1.6rem; }
+}
+
+/* ---------- Print (resume-friendly) ---------- */
+@media print {
+  .nav, .menu, .hero__scroll, .hero__visual { display: none !important; }
+  .section { padding-block: 1.5rem; break-inside: avoid; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .section--invert { background: #fff !important; color: #000 !important; }
+}

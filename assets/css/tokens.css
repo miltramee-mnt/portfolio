@@ -1,0 +1,139 @@
+/* ============================================================
+   TOKENS — the single source of truth for the design system.
+   Change a value here and it updates everywhere on the site.
+   ============================================================ */
+
+:root {
+  /* ---------- Color: neutrals ---------- */
+  --c-white:      #ffffff;
+  --c-gray-50:    #fafbfc;
+  --c-gray-100:   #f4f6f8;
+  --c-gray-150:   #eef1f5;
+  --c-gray-200:   #e4e8ee;
+  --c-gray-300:   #d2d8e0;
+  --c-gray-400:   #aeb6c2;
+  --c-gray-500:   #858e9b;
+  --c-gray-600:   #666e7a;
+  --c-gray-700:   #474e58;
+  --c-gray-800:   #2a2f36;
+  --c-gray-900:   #15181c;
+  --c-ink:        #0d1013;   /* almost-black, body text */
+
+  /* ---------- Color: pastel / soft blue (ACCENT ONLY) ---------- */
+  --c-blue-50:    #f3f8fd;
+  --c-blue-100:   #e6f0fb;
+  --c-blue-200:   #d2e4f8;
+  --c-blue-300:   #b3d2f2;   /* pastel blue */
+  --c-blue-400:   #8bb8e8;   /* soft blue */
+  --c-blue-500:   #5b93d8;   /* interactive accent */
+  --c-blue-600:   #3a72bd;
+  --c-blue-700:   #2a558e;
+
+  /* ---------- Semantic roles ---------- */
+  --bg:              var(--c-white);
+  --bg-soft:         var(--c-gray-50);
+  --bg-muted:        var(--c-gray-100);
+  --bg-tint:         var(--c-blue-50);
+  --bg-invert:       var(--c-gray-900);
+
+  --text:            var(--c-ink);
+  --text-secondary:  var(--c-gray-600);
+  --text-muted:      var(--c-gray-500);
+  --text-invert:     var(--c-white);
+  --text-invert-dim: rgba(255, 255, 255, 0.62);
+
+  --accent:          var(--c-blue-500);
+  --accent-soft:     var(--c-blue-300);
+  --accent-wash:     var(--c-blue-100);
+
+  --line:            var(--c-gray-200);
+  --line-strong:     var(--c-gray-300);
+  --line-invert:     rgba(255, 255, 255, 0.14);
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "Helvetica Neue", "Noto Sans Thai", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, "JetBrains Mono", Menlo,
+               Consolas, monospace;
+
+  /* Fluid type scale (min → max between 375px and 1440px) */
+  --fs-display: clamp(2.75rem, 1.05rem + 7.2vw, 7rem);
+  --fs-h1:      clamp(2.25rem, 1.15rem + 4.6vw, 4.75rem);
+  --fs-h2:      clamp(1.875rem, 1.15rem + 3.1vw, 3.5rem);
+  --fs-h3:      clamp(1.375rem, 1.05rem + 1.35vw, 2.125rem);
+  --fs-h4:      clamp(1.125rem, 1rem + 0.55vw, 1.4rem);
+  --fs-lead:    clamp(1.0625rem, 0.98rem + 0.65vw, 1.4375rem);
+  --fs-body:    clamp(0.9688rem, 0.94rem + 0.18vw, 1.0625rem);
+  --fs-small:   0.875rem;
+  --fs-tiny:    0.75rem;
+  --fs-stat:    clamp(3rem, 1.4rem + 6.2vw, 6.5rem);
+
+  --lh-tight:   1.04;
+  --lh-snug:    1.16;
+  --lh-normal:  1.55;
+  --lh-relaxed: 1.7;
+
+  --tracking-display: -0.035em;
+  --tracking-tight:   -0.022em;
+  --tracking-normal:  -0.011em;
+  --tracking-label:   0.14em;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  /* ---------- Spacing (8pt base) ---------- */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  2.5rem;
+  --sp-8:  3rem;
+  --sp-9:  4rem;
+  --sp-10: 5rem;
+  --sp-11: 6.5rem;
+  --sp-12: 8rem;
+
+  /* Vertical rhythm between full sections */
+  --section-y:     clamp(5rem, 3rem + 8vw, 11rem);
+  --section-y-sm:  clamp(3.5rem, 2.4rem + 5vw, 7rem);
+
+  /* ---------- Layout ---------- */
+  --container:       1240px;
+  --container-wide:  1440px;
+  --container-text:  720px;
+  --gutter:          clamp(1.25rem, 0.6rem + 3vw, 3.5rem);
+  --nav-h:           4.5rem;
+  --nav-h-compact:   3.75rem;
+
+  /* ---------- Radius ---------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 34px;
+  --r-pill: 999px;
+
+  /* ---------- Elevation (kept intentionally light) ---------- */
+  --shadow-xs: 0 1px 2px rgba(13, 16, 19, 0.04);
+  --shadow-sm: 0 2px 10px rgba(13, 16, 19, 0.05);
+  --shadow-md: 0 12px 34px -14px rgba(13, 16, 19, 0.16);
+  --shadow-lg: 0 28px 70px -28px rgba(20, 40, 70, 0.24);
+
+  /* ---------- Motion ---------- */
+  --ease-out:  cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:  180ms;
+  --dur-base:  320ms;
+  --dur-slow:  620ms;
+  --dur-reveal: 900ms;
+
+  /* ---------- Z-index ---------- */
+  --z-nav: 100;
+  --z-menu: 99;
+  --z-top: 200;
+}
