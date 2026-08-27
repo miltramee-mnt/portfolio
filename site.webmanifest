@@ -1,0 +1,11 @@
+{
+  "name": "[YOUR NAME] — Portfolio",
+  "short_name": "[YOUR NAME]",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
